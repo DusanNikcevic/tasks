@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: scale(0.7, 0.7);
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes slide-in {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+      .fade-in-element {
+        animation: fade-in 0.7s;
+      }
+      .slide-in-element {
+        animation: slide-in 0.7s;
+      }
+
+      .hidden {
+        opacity: 0;
+      }
+      h1 {
+        margin-bottom: 1500px;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        font-size: 50px;
+      }
+      div {
+        background-color: red;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Vewport Reusable Test</h1>
+    <div class="test" data-animated="true" data-animation="fade-in-element">
+      <h2
+        class="test"
+        data-animated="true"
+        data-animation="slide-in-element"
+        data-animationDelay="700"
+      >
+        Animated
+      </h2>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>

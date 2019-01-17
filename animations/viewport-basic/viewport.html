@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: scale(0.7, 0.7);
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .fade-in-element {
+        animation: fade-in 1.4s;
+      }
+
+      .hidden {
+        opacity: 0;
+      }
+      h1 {
+        margin-bottom: 1500px;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        font-size: 50px;
+      }
+      h2 {
+        background-color: red;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Vewport Test</h1>
+    <h2 class="hidden">Animated</h2>
+  </body>
+  <script src="./script.js"></script>
+</html>
