@@ -41,8 +41,6 @@ if (document.addEventListener) {
 }
 
 function init() {
-  var elements = document.querySelectorAll("td");
-  var container = document.querySelector(".container");
   var members = [
     {
       memberID: 1,
@@ -70,39 +68,4 @@ function init() {
       number: 36
     }
   ];
-  var counter = 0;
-  for (let index = 0; index < members.length; index++) {
-    for (let i = 0; i < members[index].number; i++) {
-      elements[counter].style.backgroundColor = members[index].color;
-      elements[counter].innerHTML = members[index].memberID;
-      counter++;
-    }
-    var percentage = ((members[index].number * 100) / 144).toFixed(2);
-
-    container.insertAdjacentHTML(
-      "beforeend",
-      '<div class="outer"><div class="inner" style="width:' +
-        percentage +
-        "%;background-color:" +
-        members[index].color +
-        '"></div><span class="label" style="left:' +
-        percentage +
-        '%">' +
-        percentage +
-        "%</span></div>"
-    );
-  }
-
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].onmouseover = function(e) {
-      var hex = rgbToHex(this.style.backgroundColor);
-      var darkenHex = colorChanger(hex, -20);
-      this.style.backgroundColor = darkenHex;
-    };
-    elements[i].onmouseout = function() {
-      var hex = rgbToHex(this.style.backgroundColor);
-      var lightenHex = colorChanger(hex, 20);
-      this.style.backgroundColor = lightenHex;
-    };
-  }
 }
